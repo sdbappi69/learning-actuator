@@ -1,0 +1,27 @@
+server:
+  port: 8087
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
+      group:
+        status:
+          order: UP, DOWN, OUT_OF_SERVICE, UNKNOWN
+        custom:
+          show-details: always
+          show-components: always
+info:
+  application:
+    name: Spring boot actuator learning
+    description: Spring boot actuator learning for Inspire brands
+    artifact: actuator
+    version: 1.0.0
